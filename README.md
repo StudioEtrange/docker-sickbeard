@@ -9,7 +9,11 @@
 
 ## Sample Usage
 
-for running sickbeard version 507 :
+for running latest dev version of sickbeard :
+
+	docker run -d -v $(pwd):/data -p 8081:8081 studioetrange/docker-sickbeard
+
+for running sickbeard version 507 of sickbeard :
 
 	docker run -d -v $(pwd):/data -p 8081:8081 studioetrange/docker-sickbeard:build-507
 
