@@ -1,6 +1,6 @@
 # docker sickbeard by StudioEtrange
 
-* Run sickbeard in a debian docker container
+* Run sickbeard inside a docker container built upon debian
 * Based on sickbeard github source code
 * Choice of sickbeard version
 * Use supervisor to manage sickbeard process
@@ -32,10 +32,9 @@ then go to http://localhost:8081
 	cd docker-sickbeard
 	docker build -t=studioetrange/docker-sickbeard .
 
-### build from docker registry
+### retrieve image from docker registry
 
 	docker pull studioetrange/docker-sickbeard
-	docker build -t=studioetrange/docker-sickbeard .
 
 ### run sickbeard 
 

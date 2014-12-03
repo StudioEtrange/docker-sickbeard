@@ -5,7 +5,6 @@ MAINTAINER StudioEtrange <nomorgan@gmail.com>
 # DEBIAN packages : SICKBEARD dependencies install ----------
 RUN apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-						python \
 						python-cheetah \
 	&& rm -rf /var/lib/apt/lists/*
 	
