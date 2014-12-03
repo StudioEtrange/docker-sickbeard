@@ -10,7 +10,7 @@ RUN apt-get update \
 	
 
 # SICKBEARD install -------------
-ENV SICKBEARD_VERSION development
+ENV SICKBEARD_VERSION build-507
 
 WORKDIR /opt/sickbeard
 
