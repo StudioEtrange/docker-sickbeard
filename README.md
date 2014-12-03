@@ -1,6 +1,6 @@
 # docker sickbeard by StudioEtrange
 
-* Run sickbeard in an debian docker container
+* Run sickbeard in a debian docker container
 * Based on sickbeard github source code
 * Choice of sickbeard version
 * Use supervisor to manage sickbeard process
