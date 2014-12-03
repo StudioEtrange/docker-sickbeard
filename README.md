@@ -56,6 +56,6 @@ then go to http://localhost:8081
 	Go to http://localhost:SICKBEARD_HTTP_PORT/
 	and configure sickbeard
 
-## Supervisor
+### Supervisor
 
 	Go to http://localhost:SUPERVISOR_HTTP_WEB/
