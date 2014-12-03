@@ -13,7 +13,7 @@ RUN apt-get update \
 # SICKBEARD install -------------
 ENV SICKBEARD_VERSION development
 
-WORKDIR -p /opt/sickbeard
+WORKDIR /opt/sickbeard
 
 RUN curl -k -SL "https://github.com/midgetspy/Sick-Beard/archive/$SICKBEARD_VERSION.tar.gz" \
 	| tar -xzf - -C /opt/sickbeard --strip-components=1
