@@ -13,9 +13,9 @@ for running latest dev version of sickbeard :
 
 	docker run -d -v $(pwd):/data -p 8081:8081 studioetrange/docker-sickbeard
 
-for running sickbeard version 507 of sickbeard :
+for running sickbeard version 503 of sickbeard :
 
-	docker run -d -v $(pwd):/data -p 8081:8081 studioetrange/docker-sickbeard:build-507
+	docker run -d -v $(pwd):/data -p 8081:8081 studioetrange/docker-sickbeard:build-503
 
 then go to http://localhost:8081
 
