@@ -45,7 +45,7 @@ then go to http://localhost:8081
 	docker run -d -v DATA_DIR:/data -p SICKBEARD_HTTP_PORT:8081 -p SUPERVISOR_HTTP_WEB:9999 studioetrange/docker-sickbeard:SICKBEARD_VERSION
 
 
-### run a shell inside this container (without sabnzdbd running)
+### run a shell inside this container (without sickbeard running)
 
 	docker run -i -t studioetrange/docker-sickbeard
 
@@ -54,7 +54,6 @@ then go to http://localhost:8081
 ### Sickbeard
 
 	Go to http://localhost:SICKBEARD_HTTP_PORT/
-	and configure sickbeard
 
 ### Supervisor
 
