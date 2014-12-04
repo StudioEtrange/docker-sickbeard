@@ -17,6 +17,7 @@ RUN git clone https://github.com/midgetspy/Sick-Beard /opt/sickbeard && git chec
 
 # SICKBEARD update script
 COPY sickbeard-update.sh /opt/sickbeard-update.sh
+RUN chmod +x /opt/sickbeard-update.sh
 
 # SUPERVISOR -------------
 COPY supervisord-sickbeard.conf /etc/supervisor/conf.d/supervisord-sickbeard.conf
