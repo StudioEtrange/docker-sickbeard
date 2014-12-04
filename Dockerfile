@@ -12,10 +12,11 @@ RUN apt-get update \
 # SICKBEARD install -------------
 ENV SICKBEARD_VERSION development
 
-RUN git clone https://github.com/midgetspy/Sick-Beard && git checkout $SICKBEARD_VERSION
+WORKDIR /opt/sickbeard
+RUN git clone https://github.com/midgetspy/Sick-Beard /opt/sickbeard && git checkout $SICKBEARD_VERSION
 
-# SICKBEARD bleeding edge update
-COPY sickbeard-bleeding-edge.sh /opt/sickbeard/sickbeard-bleeding-edge.sh
+# SICKBEARD update script
+COPY sickbeard-update.sh /opt/sickbeard-update.sh
 
 # SUPERVISOR -------------
 COPY supervisord-sickbeard.conf /etc/supervisor/conf.d/supervisord-sickbeard.conf
@@ -27,9 +28,6 @@ VOLUME /data
 EXPOSE 9999
 # sickbeard http port
 EXPOSE 8081
-
-# entrypoint
-ENTRYPOINT ["/opt/sickbeard/sickbeard-bleeding-edge.sh"]
 
 # run command by default
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf", "-n"]
