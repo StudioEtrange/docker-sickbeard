@@ -15,7 +15,7 @@ ENV SICKBEARD_VERSION development
 RUN git clone https://github.com/midgetspy/Sick-Beard && git checkout $SICKBEARD_VERSION
 
 # SICKBEARD bleeding edge update
-COPY sickbeard-bleeding-edge.sh /opt/sabnzbd/sickbeard-bleeding-edge.sh
+COPY sickbeard-bleeding-edge.sh /opt/sickbeard/sickbeard-bleeding-edge.sh
 
 # SUPERVISOR -------------
 COPY supervisord-sickbeard.conf /etc/supervisor/conf.d/supervisord-sickbeard.conf
