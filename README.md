@@ -22,7 +22,7 @@ then go to http://localhost:8081
 ## Version and Tag
 
 * Each tag is a different version of sickbeard
-* latest is the development version from sickbeard git repository
+* latest is the development version from sickbeard git repository. But you should build the image yourself OR use /opt/sickbeard-update.sh to have an uptodate image.
 
 ## Instruction 
 
