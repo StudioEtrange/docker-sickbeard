@@ -17,9 +17,12 @@ then go to http://localhost:8081
 
 ## Version and Tag
 
-* docker-tag:latest or github-branch:master ==> latest stable sickbeard version available through this repository
-* docker-tag:ver or github-branch:ver  ==> sickbeard version ver
-* docker-tag:dev or github-branch:dev ==> development version from sickbeard git repository
+* docker-tag:latest ==> latest stable sickbeard version available through this repository
+* github-branch:master ==> work in progress based on latest stable sickbeard version available through this repository
+* docker-tag:ver connected to github-branch:ver  ==> sickbeard version ver
+* docker-tag:dev connected to github-branch:dev ==> development version from sickbeard git repository
+
+
 
 In dev case, to have an uptodate image you should
 * build the docker image yourself (see build from github souce below)
