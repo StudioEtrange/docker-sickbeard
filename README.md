@@ -9,20 +9,21 @@
 
 ## Sample Usage
 
-for running latest dev version of sickbeard :
+for running latest stable version of sickbeard :
 
-	docker run -d -v $(pwd):/data -p 8081:8081 studioetrange/docker-sickbeard
-
-for running sickbeard version 503 of sickbeard :
-
-	docker run -d -v $(pwd):/data -p 8081:8081 studioetrange/docker-sickbeard:build-503
+	docker run -d -v $(pwd):/data -p 8081:8081 studioetrange/docker-sickbeard:latest
 
 then go to http://localhost:8081
 
 ## Version and Tag
 
-* Each tag is a different version of sickbeard
-* latest is the development version from sickbeard git repository. But you should build the image yourself OR use /opt/sickbeard-update.sh to have an uptodate image.
+* docker-tag:latest or github-branch:master ==> latest stable sickbeard version available through this repository
+* docker-tag:ver or github-branch:ver  ==> sickbeard version ver
+* docker-tag:dev or github-branch:dev ==> development version from sickbeard git repository
+
+In dev case, to have an uptodate image you should
+* build the docker image yourself (see build from github souce below)
+* OR launch in the container the script /opt/sickbeard-update.sh
 
 ## Instruction 
 
