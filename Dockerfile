@@ -10,14 +10,13 @@ RUN apt-get update \
 	
 
 # SICKBEARD install -------------
-ENV SICKBEARD_VERSION development
+ENV SICKBEARD_VERSION build-507
 
 WORKDIR /opt/sickbeard
-RUN git clone https://github.com/midgetspy/Sick-Beard /opt/sickbeard && git checkout $SICKBEARD_VERSION
 
-# SICKBEARD update script
-COPY sickbeard-update.sh /opt/sickbeard-update.sh
-RUN chmod +x /opt/sickbeard-update.sh
+RUN curl -k -SL "https://github.com/midgetspy/Sick-Beard/archive/$SICKBEARD_VERSION.tar.gz" \
+	| tar -xzf - -C /opt/sickbeard --strip-components=1
+
 
 # SUPERVISOR -------------
 COPY supervisord-sickbeard.conf /etc/supervisor/conf.d/supervisord-sickbeard.conf
