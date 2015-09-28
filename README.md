@@ -4,7 +4,7 @@
 * Based on sickbeard github source code
 * Choice of sickbeard version
 * Use supervisor to manage sickbeard process
-* By default sickbeard configuration files will be in /data/sickbeard
+* By default sickbeard configuration files will be in /data/sickbeard _(You should map a docker volume to /data)_
 
 
 ## Sample Usage
@@ -15,20 +15,15 @@ for running latest stable version of sickbeard :
 
 then go to http://localhost:8081
 
-## Version and Tag
+## Docker tags
 
-* docker-tag:latest ==> latest stable sickbeard version available through this repository
-* github-branch:master ==> work in progress based on latest stable sickbeard version available through this repository
-* docker-tag:ver connected to github-branch:ver  ==> sickbeard version ver
-* docker-tag:dev connected to github-branch:dev ==> development version from sickbeard git repository
+Available tag for studioetrange/docker-sickrage:__TAG__
 
+	latest, 507, 506, 505, 504
 
+Current latest tag is version __507__
 
-In dev case, to have an uptodate image you should
-* build the docker image yourself (see build from github souce below)
-* OR launch in the container the script /opt/sickbeard-update.sh
-
-## Instruction 
+## Instruction
 
 ### build from github source
 
@@ -51,7 +46,7 @@ In dev case, to have an uptodate image you should
 
 ### run a shell inside this container (without sickbeard running)
 
-	docker run -i -t studioetrange/docker-sickbeard
+	docker run -i -t studioetrange/docker-sickbeard bash
 
 ## Access point
 
@@ -62,3 +57,11 @@ In dev case, to have an uptodate image you should
 ### Supervisor
 
 	Go to http://localhost:SUPERVISOR_HTTP_WEB/
+
+## Notes on Github / Docker Hub Repository
+
+* This github repository is linked to an automated build in docker hub registry.
+
+	https://registry.hub.docker.com/u/studioetrange/docker-sickrage/
+
+* _update.sh_ is only an admin script which update and add new versions. This script do not auto create missing tag in docker hub webui. It is only for admin/owner purpose.
