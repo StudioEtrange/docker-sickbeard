@@ -10,11 +10,11 @@ RUN apt-get update \
 	
 
 # SICKBEARD install -------------
-ENV SICKBEARD_VERSION build-507
+ENV ITEM_VERSION build-506
 
 WORKDIR /opt/sickbeard
 
-RUN curl -k -SL "https://github.com/midgetspy/Sick-Beard/archive/$SICKBEARD_VERSION.tar.gz" \
+RUN curl -k -SL "https://github.com/midgetspy/Sick-Beard/archive/$ITEM_VERSION.tar.gz" \
 	| tar -xzf - -C /opt/sickbeard --strip-components=1
 
 
