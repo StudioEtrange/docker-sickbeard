@@ -1,3 +1,5 @@
+# NOT maintained : use https://github.com/StudioEtrange/docker-medusa instead
+
 # docker sickbeard by StudioEtrange
 
 * Run sickbeard inside a docker container built upon debian
